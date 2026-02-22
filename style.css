@@ -1,96 +1,110 @@
 body{
-font-family: 'Segoe UI', sans-serif;
 margin:0;
-background:#fff7fb;
-color:#333;
+font-family:Arial, sans-serif;
+color:white;
+text-align:center;
+
+background:url("images/fondo.gif") no-repeat center center fixed;
+background-size:cover;
 }
 
 header{
-text-align:center;
-padding:90px 20px;
-background:linear-gradient(135deg,#ff7eb3,#ff4f9a);
-color:white;
+padding:80px 20px;
 }
 
-h1{
+.titulo{
 font-size:40px;
-margin-bottom:10px;
+animation:rebote 2s infinite;
 }
 
-.btn{
-background:white;
-color:#ff4f9a;
-padding:12px 25px;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-transition:0.3s;
+@keyframes rebote{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
 }
 
-.btn:hover{
-background:#ffe3ef;
-}
-
-
-section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-h2{
-color:#ff4f9a;
+.subtitulo{
+opacity:0.8;
 margin-bottom:20px;
 }
 
-#proyectos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+h2{
+text-align:center;
+margin-top:60px;
 }
 
+
+.btn, .btn-card{
+background:#00c3ff;
+padding:10px 20px;
+border-radius:20px;
+text-decoration:none;
+color:white;
+display:inline-block;
+margin-top:15px;
+transition:.3s;
+}
+
+.btn:hover,
+.btn-card:hover{
+transform:scale(1.1);
+}
+
+
 .card{
-background:white;
-padding:20px;
+width:80%;
+max-width:900px;
+margin:40px auto;
+padding:25px;
 border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.3s;
+background:rgba(0,0,0,0.7);
+transition:.4s;
+border:2px solid transparent;
 }
 
 .card:hover{
-transform:translateY(-5px);
+border-color:#00c3ff;
+box-shadow:0 0 20px #00c3ff;
 }
 
-.galeria{
-display:flex;
-gap:10px;
-overflow-x:auto;
-margin-bottom:15px;
-}
 
-.galeria img{
+.slider{
+position:relative;
 width:100%;
-max-width:250px;
+height:400px;
+overflow:hidden;
+}
+
+.slider img{
+width:100%;
+height:400px;
+object-fit:cover;
+display:none;
 border-radius:10px;
 }
 
-.card a{
-display:inline-block;
-margin-top:10px;
-background:#ff4f9a;
+.slider img.active{
+display:block;
+}
+
+
+.prev, .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.6);
 color:white;
-padding:8px 15px;
-border-radius:20px;
-text-decoration:none;
+border:none;
+font-size:25px;
+cursor:pointer;
+padding:10px;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.tech{
+display:block;
+margin-top:15px;
+opacity:0.8;
 font-size:14px;
-}
-
-.card a:hover{
-background:#ff2e84;
-}
-
-#contacto{
-text-align:center;
-background:#ffe3ef;
-border-radius:15px;
 }
