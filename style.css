@@ -1,40 +1,96 @@
 body{
-font-family: Arial, sans-serif;
+font-family: 'Segoe UI', sans-serif;
 margin:0;
-background:#f4f6f8;
+background:#fff7fb;
 color:#333;
 }
 
 header{
 text-align:center;
-padding:80px 20px;
-background:#111;
+padding:90px 20px;
+background:linear-gradient(135deg,#ff7eb3,#ff4f9a);
 color:white;
+}
+
+h1{
+font-size:40px;
+margin-bottom:10px;
 }
 
 .btn{
-background:#4CAF50;
-color:white;
-padding:10px 20px;
+background:white;
+color:#ff4f9a;
+padding:12px 25px;
 text-decoration:none;
-border-radius:5px;
+border-radius:30px;
+font-weight:bold;
+transition:0.3s;
 }
 
+.btn:hover{
+background:#ffe3ef;
+}
+
+
 section{
-padding:50px;
-max-width:900px;
+padding:60px 20px;
+max-width:1000px;
 margin:auto;
+}
+
+h2{
+color:#ff4f9a;
+margin-bottom:20px;
+}
+
+#proyectos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
 .card{
 background:white;
 padding:20px;
-margin:20px 0;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
-.card img{
+.card:hover{
+transform:translateY(-5px);
+}
+
+.galeria{
+display:flex;
+gap:10px;
+overflow-x:auto;
+margin-bottom:15px;
+}
+
+.galeria img{
 width:100%;
+max-width:250px;
 border-radius:10px;
+}
+
+.card a{
+display:inline-block;
+margin-top:10px;
+background:#ff4f9a;
+color:white;
+padding:8px 15px;
+border-radius:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+.card a:hover{
+background:#ff2e84;
+}
+
+#contacto{
+text-align:center;
+background:#ffe3ef;
+border-radius:15px;
 }
